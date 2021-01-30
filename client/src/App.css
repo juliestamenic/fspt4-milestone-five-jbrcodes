@@ -3,10 +3,16 @@ h1 {
   text-transform: uppercase;
 }
 
-.container {
+form {
+  padding: 20px;
+}
+
+ul {
   text-align: center;
-  display: flex;
-  justify-content: center;
-  margin-right: auto;
-  margin-left: auto;
+  display: block;
+  list-style-type: "🐢";
+  margin-left: 30px;
+  padding-left: 10px;
+  padding: 3px 8px 3px 8px;
+  float: left;
 }

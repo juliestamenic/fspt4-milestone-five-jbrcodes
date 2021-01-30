@@ -22,7 +22,7 @@ export default function App() {
       });
   };
 
-  const handleChange = event => {
+  function handleChange(event) {
     setInput(event.target.value);
     console.log(event.target.value);
     // let {firstname, value} = event.target.value
@@ -36,7 +36,7 @@ export default function App() {
     //     default:
     //       break;
     //   }
-  };
+  }
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -81,26 +81,39 @@ export default function App() {
       <h1>CodeOp's Facebook</h1>
       <form onSubmit={e => handleSubmit(e)}>
         <label>
-          {" "}
-          New Student:
-          <input type="text" name="firstname" onChange={e => handleChange(e)} />
-          <input type="text" name="lastname" onChange={e => handleChange(e)} />
+          <h3>Add a new student: </h3>
+          <br />
         </label>
+        <label>
+          First Name:
+          <input type="text" name="firstname" onChange={e => handleChange(e)} />
+        </label>
+
+        <label>
+          Last Name:
+          <input
+            type="text"
+            name="lastname"
+            onChange={e => handleChange(e)}
+            placeholder="CodeOp"
+          />
+        </label>
+
         <button type="submit">Submit</button>
 
-        <h2>Current Students</h2>
-        <ul>
-          {students &&
-            students.map(s => (
-              <li id="li" key={s.firstname}>
-                {s.firstname} {s.lastname}
-                <button onClick={e => deleteStudent(s.id)} type="button">
-                  Delete
-                </button>
-              </li>
-            ))}
-        </ul>
+        <h3>CURRENT STUDENTS</h3>
       </form>
+      <ul>
+        {students &&
+          students.map(s => (
+            <li id="li" key={s.firstname}>
+              {s.firstname} {s.lastname}
+              <button onClick={e => deleteStudent(s.id)} type="button">
+                Delete
+              </button>
+            </li>
+          ))}
+      </ul>
     </div>
   );
 }

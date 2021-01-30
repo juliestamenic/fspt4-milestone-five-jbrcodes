@@ -81,10 +81,11 @@ Give yourself a grade for each question. Explain why you gave yourself that grad
 
 ### 1. API Endpoints & MySQL
 
-- Grade:
-- Explanation:
+- Grade: 4
+- Explanation: This part worked pretty well ! I was happy to get it to work quite easily with postman, I think my bug hunt yesterday helped a lot! :)
 
 ### 2. Frontend
 
-- Grade:
-- Explanation:
+- Grade:3
+- Explanation: Pretty happy about the result but could not make two things to work:
+  submit the last name and reset the first name...
