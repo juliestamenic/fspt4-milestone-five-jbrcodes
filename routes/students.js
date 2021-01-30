@@ -33,10 +33,10 @@ router.get("/:id", async (req, res) => {
 // INSERT a new student into the DB
 router.post("/", (req, res) => {
   //your code here
-  let { firstname, lastname } = req.body;
+  let { input, lastname } = req.body;
   let sql = `
 INSERT INTO students (firstname, lastname)
-VALUES ('${firstname}', '${lastname}')
+VALUES ('${input}', '${lastname}')
 `;
   db(sql)
     .then(results => {
